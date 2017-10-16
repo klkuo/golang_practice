@@ -1,18 +1,23 @@
-package  main
+package main
 
 import "fmt"
 
 func main() {
-    var a int= 20   /* actual variable declaration */
-    var ip *int     /* pointer variable declaration */
+    var a int = 20   /* actual variable declaration */
+    var ip *int      /* pointer variable declaration */
 
     ip = &a  /* store address of a in pointer variable*/
 
-    fmt.Printf("Address of a variable: %x\n", &a  )
+    fmt.Printf("Address of a variable: %x\n", &a)
 
     /* address stored in pointer variable */
-    fmt.Printf("Address stored in ip variable: %x\n", ip )
+    fmt.Printf("Address stored in ip variable: %x\n", ip)
+
+    /* address stored self variable */
+    fmt.Printf("Address stored in ip variable: %x\n", &ip)
 
     /* access the value using the pointer */
-    fmt.Printf("Value of *ip variable: %d\n", *ip )
+    fmt.Printf("Value of *ip variable: %d\n", *ip)
+
+    fmt.Printf("Address of a variable: %x\n", &a)
 }
